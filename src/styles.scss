@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.wh-full{
+width: 100%;
+height: 100%;
+}
+
+.width-full{
+    width: 100%;
+}
+
+.height-full{
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 400;
+}
+
+.d-bgcolor{
+background-color: #eb5f02;
+color: white;
+}
+
+.d-color{
+   // color:#eb5f02;;
+   color:#E86A02;
+}
+
+.d-padding{
+padding: 10px 8px 8px 10px;
+}

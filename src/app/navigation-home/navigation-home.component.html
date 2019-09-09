@@ -1,0 +1,84 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <h3 style="text-align: center">Menu</h3>
+    <!-- <mat-nav-list>
+      <a mat-list-item href=""> <img src="../../assets/icons/home_s4.png" alt=""> <br> <span> Home Loan</span> </a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list> -->
+
+    <table class="nav-table" style="width: 100%;text-align: center">
+        <tr [routerLinkActive]="'active'" routerLink="/home/userManage">
+          <td>
+            <mat-icon>account_circle</mat-icon> <br>
+            Users
+          </td>
+        </tr>
+        <br><br>
+
+      <tr [routerLinkActive]="'active'" routerLink="/home/homeLoan">
+        <td>
+          <img src="../../assets/icons/home_s4.png" alt=""> <br>
+          Home Loan
+        </td>
+      </tr>
+      <br><br>
+      <tr [routerLinkActive]="'active'" routerLink="/home/vehicleLoan">
+        <td>
+          <img src="../../assets/icons/car_s4.png" alt=""> <br>
+          Vehicle
+        </td>
+      </tr>
+      <br><br>
+      <tr [routerLinkActive]="'active'" routerLink="/home/personalLoan">
+        <td>
+          <img src="../../assets/icons/person_s4.png" alt=""> <br>
+          Personal
+        </td>
+      </tr>
+
+      <br><br>
+      <tr [routerLinkActive]="'active'" routerLink="/home/educationLoan">
+        <td>
+          <img src="../../assets/icons/certificate_s4.png" alt=""><br>
+          Education
+        </td>
+      </tr>
+
+      <br><br>
+      <tr [routerLinkActive]="'active'" routerLink="/home/digitalizationLoan">
+        <td>
+          <img src="../../assets/icons/bank_s4.png" alt=""> <br>
+          MSME E2E - Digitalization
+        </td>
+      </tr>
+      <br>
+    </table>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <div style="position: relative;display: flex; flex-direction: column;height: 100%;width: 100%;">
+      <div>
+        <mat-toolbar>
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span class="d-color home-title">SyndicateBank <br> <span>A Govt. of India Undertaking</span></span>
+          <span class="flex-nav"></span>
+
+          <button mat-icon-button matTooltip="Logout" routerLink="/login" ><mat-icon>power_settings_new</mat-icon>   </button>
+
+          <div  ><img style="width: 236px;
+        height: 71px;" src="../../assets/logo.png"></div>
+        </mat-toolbar>
+         
+      </div>
+      <div style="padding-left:55px;">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+
+   </mat-sidenav-container>

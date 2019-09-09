@@ -1,0 +1,51 @@
+
+.login-bg-color{
+  //  background: linear-gradient(to bottom right,#FFA200,#E08802,#EB5F02,#F96E01,#F2AB07)
+  background: linear-gradient(to bottom right, #ffb000,#f57900,#EB5F02, #EB5F02, #EB5F02, #f57900, #ffb000);
+}
+
+.login-btn{
+  width: 185px;
+  color:white;
+  border:1px solid white;
+}
+
+.logo-align{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: -1px;
+}
+
+.login-page mat-form-field{
+  width: 250px !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+.image-align {
+border-collapse: collapse;
+width: 60%;
+}
+
+.image-align tr{
+  margin-bottom: 20px;
+  background: #ffffff17;
+  border: 1px solid #eb5f02;
+}
+
+.image-align > tr >th, .image-align > tr >td{
+ padding: 10px;
+}
+
+.image-align > tr >th{
+width: 80px;
+}
+
+.image-align > tr >td{
+}
+
+
+.image-align tr:hover{
+  cursor: pointer;
+  background: #f57900;
+}

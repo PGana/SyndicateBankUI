@@ -1,0 +1,96 @@
+<div style="background-color: white;margin-left: 0px;padding-left: 15px;padding-top: 15px">
+
+    <form style="width: 350px">
+        <mat-form-field>
+            <mat-label>Schema Type</mat-label>
+            <mat-select required>
+                <mat-option *ngFor="let schema of schemaType" [value]="schema.value">
+                    {{schema.text}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+                <mat-label>Purpose of Loan </mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let schema of purposeOfLoan" [value]="schema.value">
+                        {{schema.text}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Select Region</mat-label>
+            <mat-select required>
+                <mat-option *ngFor="let schema of region" [value]="schema.value">
+                    {{schema.text}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Preferred branch</mat-label>
+            <mat-select required>
+                <mat-option *ngFor="let schema of PfreferredLoc" [value]="schema.value">
+                    {{schema.text}}
+                </mat-option>
+            </mat-select>
+            <mat-hint>Select the Nearest Location</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [matDatepicker]="myDatepicker" placeholder="Date of Birth" required>
+            <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <mat-label>Gross Income (Monthly)</mat-label>
+            <input matInput type="number" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Gross Income (Monthly)</mat-label>
+            <input matInput type="number" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Gross Income (Monthly)</mat-label>
+            <input matInput type="number" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Repayment </mat-label>
+            <input matInput type="number" required>
+            <mat-hint>Obligations of Existing Loans(Annual)</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Required Loan Amount</mat-label>
+            <input matInput type="number" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Required Tenure Period(Months)</mat-label>
+            <input matInput type="number" required>
+        </mat-form-field>
+<button mat-raised-button color="primary">Calculate EMI</button>
+    </form>
+
+    <div>
+        <p style="font-size: 14px">
+            <b>Note</b> <br>
+            The system does not take into account variance of Rate of Interest from time to time due to bank policy
+            guidelines.
+        </p>
+        <p style="font-size: 14px">
+            <b> Disclaimer:</b><br>
+            The above eligible loan amount has been arrived at based on the income and expenditure details entered
+            above. The same is subject to verification before sanctioning of loan.
+
+
+        </p>
+    </div>
+
+</div>
